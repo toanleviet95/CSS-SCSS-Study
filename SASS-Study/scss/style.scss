@@ -1,0 +1,110 @@
+$color-red: red;
+$color-green: green;
+
+/* Nested */
+.main {
+    color: $color-green;
+    width: 100%;
+    .main-content {
+        background-color: $color-red;
+        color: black;
+        a {
+            font-weight: bold;
+            &:hover {
+                color: $color-red;
+            }
+        }
+    }
+    .main-info {
+        font: {
+            family: Arial;
+            size: 30px;
+            weight: bold;
+        }
+    }
+}
+
+/* Mixin */
+@mixin border-rd($var1, $var2) {
+    border-radius: $var1 $var2;
+    -moz-border-radius: $var1 $var2;
+    -webkit-border-radius: $var1 $var2;
+    -o-border-radius: $var1 $var2;
+}
+
+.main-mixin {
+    width: 500px;
+    height:200px;
+    @include border-rd(10px, 0px);
+}
+
+/* Extend */
+.main-extend {
+    width: 500px;
+    @extend .main-mixin;
+}
+
+/* Placeholder selector */
+%border {
+    border-radius: 20px 0px;
+}
+
+.main-placeholder {
+    @extend %border;
+}
+
+/* Operations */
+.operations {
+    width: (500px + 100px);
+    width: (800px - 300px);
+    height: (1000px / 5);
+    height: (1000px * 2);
+    margin-right: round(2.5)/3;
+    color: (#010203 + #040506) * 2;
+}
+
+/* Interpolation */
+$name: main;
+$border: border;
+.container .#{$name} {
+    color: white;
+    #{$border}-color: gray;
+}
+
+/* If */
+$condition: red;
+.main-if{
+    @if($condition == red) {
+        background: red;
+    }
+    @else if($condition == blue) {
+        background: blue;
+    }
+    @else {
+        background: gray;
+    }
+}
+
+/* For */
+@for $i from 1 through 6 {
+    .item-#{$i} {
+        width: #{$i}em;
+    }
+}
+
+/* Each */
+@each $var, $color in (item1, red), (item2, blue), (item3, green) {
+    .#{$var} {
+        background: url("/image/#{$var}.png");
+        color: #{$color};
+    }
+}
+
+/* While */
+$n: 1;
+@while ($n < 6) {
+    .item-while-#{$n} {
+        width: 12px * #{$n};
+    }
+    $n: $n+1;
+}

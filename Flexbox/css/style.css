@@ -1,0 +1,92 @@
+.flex-container {
+    background: red;
+    max-width: 960px;
+    max-height: 1000px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.flex-item {
+    background: blue;
+    margin: 5px;
+    color: white;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* Flex */
+.flex-container {
+    display: flex;
+}
+
+/* Flex direction */
+/* .flex-container {
+    flex-direction: column;
+} */
+
+/* Flex wrap */
+/* .flex-item {
+    width: 1000px;
+} */
+
+/*.flex-container {
+    flex-wrap: wrap;
+} */
+
+/* Order */
+/* .item1 {
+    order: 4;
+}
+
+.item2 {
+    order: 3;
+}
+
+.item3 {
+    order: 2;
+}
+
+.item4 {
+    order: 1;
+} */
+
+/* Flex grow */
+/* .flex-item {
+    width: 50px;
+}
+
+.item1 {
+    flex-grow: 2;
+}
+
+.item2 {
+    flex-grow: 1;
+} */
+
+/* Flex shrink */
+/* .flex-item {
+    width: 250px;
+}
+
+.item3 {
+    flex-shrink: 2;
+} */
+
+/* Flex basis */
+/* .flex-item {
+    width: 50px;
+}
+
+.item3 {
+    flex-basis: 500px;
+} */
+
+/* Justify content */
+.flex-item {
+    width: 50px;
+}
+
+.flex-container {
+    justify-content: flex-end;
+}

@@ -1,0 +1,138 @@
+/* Nested */
+
+.main {
+  color: green;
+  width: 100%;
+}
+
+.main .main-content {
+  background-color: red;
+  color: black;
+}
+
+.main .main-content a {
+  font-weight: bold;
+}
+
+.main .main-content a:hover {
+  color: red;
+}
+
+.main .main-info {
+  font-family: Arial;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Mixin */
+
+.main-mixin,
+.main-extend {
+  width: 500px;
+  height: 200px;
+  border-radius: 10px 0px;
+  -moz-border-radius: 10px 0px;
+  -webkit-border-radius: 10px 0px;
+  -o-border-radius: 10px 0px;
+}
+
+/* Extend */
+
+.main-extend {
+  width: 500px;
+}
+
+/* Placeholder selector */
+
+.main-placeholder {
+  border-radius: 20px 0px;
+}
+
+/* Operations */
+
+.operations {
+  width: 600px;
+  width: 500px;
+  height: 200px;
+  height: 2000px;
+  margin-right: 1;
+  color: #0a0e12;
+}
+
+/* Interpolation */
+
+.container .main {
+  color: white;
+  border-color: gray;
+}
+
+/* If */
+
+.main-if {
+  background: red;
+}
+
+/* For */
+
+.item-1 {
+  width: 1em;
+}
+
+.item-2 {
+  width: 2em;
+}
+
+.item-3 {
+  width: 3em;
+}
+
+.item-4 {
+  width: 4em;
+}
+
+.item-5 {
+  width: 5em;
+}
+
+.item-6 {
+  width: 6em;
+}
+
+/* Each */
+
+.item1 {
+  background: url("/image/item1.png");
+  color: red;
+}
+
+.item2 {
+  background: url("/image/item2.png");
+  color: blue;
+}
+
+.item3 {
+  background: url("/image/item3.png");
+  color: green;
+}
+
+/* While */
+
+.item-while-1 {
+  width: 12px * 1;
+}
+
+.item-while-2 {
+  width: 12px * 2;
+}
+
+.item-while-3 {
+  width: 12px * 3;
+}
+
+.item-while-4 {
+  width: 12px * 4;
+}
+
+.item-while-5 {
+  width: 12px * 5;
+}

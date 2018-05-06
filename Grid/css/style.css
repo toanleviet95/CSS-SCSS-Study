@@ -1,0 +1,70 @@
+.grid-container {
+    background: red;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.grid-item {
+    background: blue;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* Rows and columns */
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 100px 100px 100px 100px;
+}
+
+/* Grid gaps */
+.grid-container {
+    grid-column-gap: 50px;
+    grid-row-gap: 25px;
+    /* grid-gap: 50px 25px; */
+}
+
+/* Grid start and end */
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /* grid-column: 1 / 4; */
+}
+
+.item3 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    /* grid-row: 2 / 4; */
+}
+
+.item7 {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    /* grid-column: 1 / span 3; */
+}
+
+/* New unit: Fraction (fr) */
+.grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 100px);
+}
+
+/* Align and justify items */
+.grid-container {
+    align-items: stretch; /* start | end | center | stretch (default) */
+    justify-items: stretch; /* start | end | center | stretch (default) */
+    /* place-items: stretch stretch; */ /* <align-items> <justify-items> */
+}
+
+.grid-container {
+    align-content: stretch; /* start | end | center | stretch | space-around | space-between | space-evenly */
+    justify-content: stretch; /* start | end | center | stretch | space-around | space-between | space-evenly */
+    /* place-content: stretch stretch; */ /* <align-content> <justify-content> */
+}
+
+.item1 {
+    align-self: end;
+    justify-self: stretch;
+}
